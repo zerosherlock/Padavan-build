@@ -53,6 +53,8 @@ jobs:
       with:
         go-version: ${{ steps.vars.outputs.go_version }}
     - name: Build Firmware
+    env:
+        TNAME: rm2100
       run: |
         cd /opt/rt-n56u/trunk
         echo "CPU超频到$MHZ"mhz
